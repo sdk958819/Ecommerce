@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/wow.css" />
+        <link rel="stylesheet" type="text/css" href="css/scrollTop.css" />
+        <style>
+            .modal {
+                background: rgba(255, 255, 255, 0.7) !important;
+            }
+            .modal-content {
+                border-radius: 0px !important;
+                box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.3);
+                border: none !important;
+            }
+            #odertimer {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-body-section">
+            <header class="header-area fixed-top" id="header">
+                <nav class="navbar navbar-expand-lg my-0 py-0">
+                    <div class="container-fluid">
+                        <a href="Index.html" class="navbar-brand">
+                            <img src="images/logo1.png" class="logo" id="navbrandimg" />
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="NavFaBars"><i class="fas fa-bars font24"></i></span>
+                            <span class="NavFaTimes" style="display: none;"><i class="fas fa-times font24"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav ml-auto" style="margin-top: 10px;">
+                                <li class="nav-item">
+                                    <a href="Index.html" class="nav-link nav-effect">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link nav-effect" href="categories.html">
+                                        Categories
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav-effect">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav-effect">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav-effect">Pizza</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav-effect">Drinks</a>
+                                </li>
+                                <li class="nav-item dropdown position-static">
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="lnr lnr-cart font18 font-weight-bold txtclr"></span>
+                                        Cart (<span class="total-count"></span>)
+                                    </a>
+
+                                    <div class="dropdown-menu custome-dropdown-menu1 mt-0 w-100 shadow border-outline-success" aria-labelledby="navbarDropdown">
+                                        <div class="container">
+                                            <div class="row show-cart mt-2"></div>
+                                        </div>
+                                        <div class="container mt-3 text-center">
+                                            <div class="text-left mt-3">
+                                                Total price: $
+                                                <span class="total-cart"></span>
+                                            </div>
+                                            <div>
+                                                <a class="clear-cart btn btn-danger">Clear Cart</a>
+                                                <a href="#" class="btn btn-success CheckoutnBtn" onclick="return Timer()">Check out</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" data-toggle="dropdown">
+                                        <i class="far fa-user-circle font16"></i>
+                                        <span class="lnr lnr-chevron-down font-weight-bold font10"></span>
+                                    </a>
+                                    <div class="dropdown-menu custome-dropdown-menu2">
+                                        <p>
+                                            <a href="#" class="profile-links">
+                                                <i class="fas fa-sign-out-alt mr-1"></i>
+                                                Log out
+                                            </a>
+                                        </p>
+                                        <p>
+                                            <a href="dashboard/dashboard.html" class="profile-links">
+                                                <i class="fas fa-tachometer-alt mr-1"></i>
+                                                Dashboard
+                                            </a>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="category-home-section over-flow">
+                <div class="contaner">
+                    <div class="row my-5">
+                        <div class="col-md-10 mx-auto text-center">
+                            <h1 class="text-center text-white">All Categories</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-content-section mb-5">
+                <div class="container">
+                    <div class="row bg-white bx-shadow p-4">
+                        <div class="col-lg-4 my-3">
+                            <a href="#">
+                                <div class="p-3 text-center bx-border rounded">
+                                    <img src="images/burger1.jpg" alt="burger1" class="category-img" />
+                                    <h5>Spicy Burger</h5>
+                                    <p>The patty may be pan fried, grilled, smoked or flame broiled</p>
+                                    <h6 class="txtclr">&#x20B9; 45</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 my-3">
+                            <a href="#">
+                                <div class="p-3 text-center bx-border rounded">
+                                    <img src="images/burger1.jpg" alt="burger1" class="category-img" />
+                                    <h5>Spicy Burger</h5>
+                                    <p>The patty may be pan fried, grilled, smoked or flame broiled</p>
+                                    <h6 class="txtclr">&#x20B9; 45</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 my-3">
+                            <a href="#">
+                                <div class="p-3 text-center bx-border rounded">
+                                    <img src="images/burger1.jpg" alt="burger1" class="category-img" />
+                                    <h5>Spicy Burger</h5>
+                                    <p>The patty may be pan fried, grilled, smoked or flame broiled</p>
+                                    <h6 class="txtclr">&#x20B9; 45</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-5 over-flow">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-md-8 mx-auto text-center">
+                            <h2 class="text-center">Most Viwed Itms</h2>
+                            <div class="bottom-line">
+                                <div class="bottom-dot"></div>
+                            </div>
+                            <p class="text-center font16">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger2.jpg" alt="burger2" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Cheese burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 75</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" data-name="Cheese burger" data-price="75" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger3.jpg" alt="burger3" class="category-img" />
+                                <h5 class="font16 text-center mt-3">All American Burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 110</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="All American Burger" data-price="110" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger4.jpg" alt="burger4" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Barbecue Burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 95</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Barbecue Burger" data-price="95" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger5.jpg" alt="burger5" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Meat Burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 160</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Meat Burger" data-price="160" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger6.jpg" alt="burger6" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Cheesy burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 85</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Cheesy burger" data-price="85" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger7.jpg" alt="burger7" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Carolina Q Burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 60</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Carolina Q Burger" data-price="60" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger8.jpg" alt="burger8" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Spicy burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 65</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Spicy burger" data-price="65" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 my-3 category-bx-effect">
+                            <div class="p-3 bx-shadow1">
+                                <img src="images/burger9.jpg" alt="burger9" class="category-img" />
+                                <h5 class="font16 text-center mt-3">Onion burger</h5>
+                                <p class="para-limit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h6 class="txtclr">&#x20B9; 60</h6>
+                                <div class="d-flex justify-content-between">
+                                    <button data-name="Onion burger" data-price="60" class="add-to-cart category-btn">Add To Cart</button>
+                                    <a href="item-details.html" class="AddToCardBtn mx-1 font12"> View Details<span></span><span></span><span></span><span></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-4 ml-2">Comapny</h4>
+                            <ul>
+                                <li class="footer-links">
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Our Team</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Career with Us</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white ml-2">Legal</h4>
+                            <ul>
+                                <li class="footer-links">
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Offer Terms</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Refund & Cancellatin</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Cookie Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white ml-2">Categories</h4>
+                            <ul>
+                                <li class="footer-links">
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Offer Terms</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Refund & Cancellatin</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Cookie Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white ml-2">Our Office Locations</h4>
+                            <ul>
+                                <li class="footer-links">
+                                    <a href="#">Delhi</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Grurgram</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Uttar Pradesh</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">UttaraKhan</a>
+                                </li>
+                                <li class="footer-links">
+                                    <a href="#">Madhya Pradesh</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <p class="text-white text-center">Copyright © 2020 Massman CyberGeeks | All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="mr-auto">
+                <a id="back2Top" title="Back to top" href="#">
+                    <span class="lnr lnr-chevron-down font-weight-bold"></span>
+                </a>
+            </div>
+
+            <div id="odertimer" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                <a class="talk-with-us" data-toggle="modal" data-target="#orderModal">
+                    <span class="text-white" id="clockdiv"></span>
+                </a>
+            </div>
+
+            <div class="modal fade" id="orderModal">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="row">
+                                <div class="col-md-10 mx-auto text-center">
+                                    <h5 class="modal-title text-center">Oder Details</h5>
+                                    <div class="bottom-line">
+                                        <div class="bottom-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-md-4 text-center">
+                                    <img src="images/001.png" alt="001" height="120" width="120" />
+                                </div>
+                                <div class="col-md-8">
+                                    <h6>Item Name</h6>
+                                    <p>Item description.....</p>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p>Price: <span class="txtclr">&#x20B9; 65</span></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>Oder timing: <span class="txtclr">20-10-202, 10:20am</span></p>
+                                        </div>
+                                        <div class="col-sm-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/scrollTop.js"></script>
+        <script src="js/minutes-timer.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/button.js"></script>
+        <script src="js/fontawesome.js"></script>
+
+        <script type="text/javascript">
+            wow = new WOW({
+                animateClass: "animated",
+                offset: 100,
+            });
+            wow.init();
+        </script>
+
+        <script src="" crossorigin="anonymous"></script>
+
+        <script>
+            $(".dropdown").on("click", function (event) {
+                var events = $._data(document, "events") || {};
+                events = events.click || [];
+                for (var i = 0; i < events.length; i++) {
+                    if (events[i].selector) {
+                        if ($(event.target).is(events[i].selector)) {
+                            events[i].handler.call(event.target, event);
+                        }
+                        $(event.target)
+                            .parents(events[i].selector)
+                            .each(function () {
+                                events[i].handler.call(this, event);
+                            });
+                    }
+                }
+                event.stopPropagation();
+            });
+        </script>
+    </body>
+</html>
